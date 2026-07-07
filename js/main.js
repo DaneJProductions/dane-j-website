@@ -19,7 +19,8 @@ if (contactForm) {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode(data)
     })
-      .then(() => {
+      .then((response) => {
+        if (!response.ok) throw new Error('Form submission failed: ' + response.status);
         formStatus.textContent = 'Danke! Ich melde mich so schnell wie möglich bei dir.';
         formStatus.className = 'form-status success';
         contactForm.reset();
