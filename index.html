@@ -227,11 +227,43 @@
     <div class="container">
       <span class="section-num reveal">03</span>
       <h2 class="reveal">Let's work<br>together.</h2>
-      <a href="mailto:info@dane-j.com" class="contact-email reveal">info@dane-j.com</a>
-      <div class="contact-details reveal">
-        <a href="tel:+498951506101">089 51 50 61 01</a>
-        <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener">@dane.jproductions</a>
-        <span>München, Deutschland</span>
+
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form reveal" id="contactForm">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hidden-field">
+          <label>Nicht ausfüllen: <input name="bot-field"></label>
+        </p>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+          </div>
+          <div class="form-field">
+            <label for="email">E-Mail</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="event_date">Datum (optional)</label>
+          <input type="text" id="event_date" name="event_date" placeholder="z. B. 12.09.2026">
+        </div>
+        <div class="form-field">
+          <label for="message">Nachricht</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn">Nachricht senden</button>
+        <p class="form-status" id="formStatus" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-alt">
+        <p class="contact-alt-label">oder direkt</p>
+        <a href="mailto:info@dane-j.com" class="contact-email reveal">info@dane-j.com</a>
+        <div class="contact-details reveal">
+          <a href="tel:+498951506101">089 51 50 61 01</a>
+          <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener">@dane.jproductions</a>
+          <span>München, Deutschland</span>
+        </div>
       </div>
     </div>
   </section>

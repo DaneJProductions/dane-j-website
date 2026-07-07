@@ -1,5 +1,36 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+/* ---------- Contact form (Netlify Forms, AJAX submit) ---------- */
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+  const formStatus = document.getElementById('formStatus');
+  const encode = (data) => Object.keys(data).map(key =>
+    encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+  ).join('&');
+
+  contactForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = Object.fromEntries(new FormData(contactForm).entries());
+    formStatus.textContent = 'Wird gesendet …';
+    formStatus.className = 'form-status';
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode(data)
+    })
+      .then(() => {
+        formStatus.textContent = 'Danke! Ich melde mich so schnell wie möglich bei dir.';
+        formStatus.className = 'form-status success';
+        contactForm.reset();
+      })
+      .catch(() => {
+        formStatus.textContent = 'Da ist etwas schiefgelaufen — schreib mir gern direkt per E-Mail.';
+        formStatus.className = 'form-status error';
+      });
+  });
+}
+
 /* ---------- Header scroll state ---------- */
 const header = document.getElementById('siteHeader');
 const onScroll = () => {
