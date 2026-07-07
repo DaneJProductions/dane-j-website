@@ -462,6 +462,17 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.05em;
   transition: all 0.35s var(--ease);
 }
+.btn--submit {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #0a0a0a;
+  font-weight: 500;
+}
+.btn--submit:hover {
+  background: var(--fg);
+  border-color: var(--fg);
+  color: #0a0a0a;
+}
 .btn:hover {
   background: var(--accent);
   border-color: var(--accent);
@@ -524,11 +535,10 @@ a { color: inherit; text-decoration: none; }
 }
 .form-field textarea { resize: vertical; }
 .contact-form .btn {
-  background: none;
   cursor: pointer;
   font-family: inherit;
+  border: none;
 }
-.contact-form .btn:hover { cursor: pointer; }
 .form-status {
   margin-top: 16px;
   font-size: 14px;
