@@ -8,6 +8,26 @@ const onScroll = () => {
 onScroll();
 window.addEventListener('scroll', onScroll, { passive: true });
 
+/* ---------- Hero parallax ---------- */
+const heroMedia = document.querySelector('.hero-media');
+const heroSection = document.querySelector('.hero');
+if (heroMedia && heroSection) {
+  let ticking = false;
+  const applyParallax = () => {
+    const rect = heroSection.getBoundingClientRect();
+    const progress = Math.min(Math.max(-rect.top / rect.height, 0), 1);
+    heroMedia.style.transform = `translateY(${progress * 120}px)`;
+    ticking = false;
+  };
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(applyParallax);
+      ticking = true;
+    }
+  }, { passive: true });
+  applyParallax();
+}
+
 /* ---------- Mobile nav ---------- */
 const navToggle = document.getElementById('navToggle');
 const mainNav = document.getElementById('mainNav');
