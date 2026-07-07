@@ -100,6 +100,7 @@ filterBtns.forEach(btn => {
 /* ---------- Lightbox ---------- */
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCaption = document.getElementById('lightboxCaption');
 const lightboxClose = document.getElementById('lightboxClose');
 
 galleryItems.forEach(item => {
@@ -107,6 +108,7 @@ galleryItems.forEach(item => {
     const img = item.querySelector('img');
     lightboxImg.src = img.src;
     lightboxImg.alt = img.alt;
+    lightboxCaption.textContent = item.dataset.name || '';
     lightbox.classList.add('is-open');
     document.body.style.overflow = 'hidden';
   });
