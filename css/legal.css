@@ -1,0 +1,25 @@
+.legal {
+  padding: 160px 0 100px;
+  max-width: 780px;
+}
+.legal .container { max-width: 780px; }
+.legal h1 {
+  font-family: var(--font-display);
+  font-size: clamp(40px, 6vw, 64px);
+  margin-bottom: 48px;
+}
+.legal h2 {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 18px;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  color: var(--fg);
+}
+.legal p {
+  color: var(--fg-muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+.legal a { color: var(--fg); text-decoration: underline; text-underline-offset: 3px; }
+.legal a:hover { color: var(--accent); }

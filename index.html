@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dane.J Productions — Fotograf für Event, Konzert & Sport</title>
+<meta name="description" content="Dane.J Productions — Fotograf (auf Wunsch auch Videograf) für Events, Konzerte und Sport. Basierend in München.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="cursor-dot" id="cursorDot"></div>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#home" class="logo"><img src="images/logo.png" alt="Dane.J Productions"></a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#work" class="nav-link">Portfolio</a>
+      <a href="#about" class="nav-link">Über mich</a>
+      <a href="#contact" class="nav-link">Kontakt</a>
+      <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener" class="nav-link nav-link--mobile-only">Instagram ↗</a>
+    </nav>
+    <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener" class="header-social">Instagram ↗</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="hero" id="home">
+    <div class="hero-media">
+      <img src="images/hero.jpg" alt="Konzertfotografie von Dane.J Productions" loading="eager">
+    </div>
+    <div class="hero-overlay"></div>
+    <div class="hero-curtain" aria-hidden="true"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">München · Fotograf</p>
+      <h1 class="hero-title">
+        <span class="line-mask"><span class="line-inner">EVENT.</span></span>
+        <span class="line-mask"><span class="line-inner">KONZERT.</span></span>
+        <span class="line-mask"><span class="line-inner">SPORT.</span></span>
+      </h1>
+      <p class="hero-sub">Momente, die im Blitzlicht verschwinden würden — als Foto festgehalten, auf Wunsch auch im Video.</p>
+    </div>
+    <a href="#work" class="scroll-cue">
+      <span>Scroll</span>
+      <i></i>
+    </a>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="container">
+      <p class="intro-text reveal">
+        Ich bin <strong>Dane Junold</strong> — Fotograf aus München, auf Wunsch auch als
+        Videograf buchbar. Ich fange die Energie von ausverkauften Konzerten, die
+        Emotion im Sport und die Atmosphäre exklusiver Events ein. Kein gestelltes
+        Lächeln, kein Studiolicht — echte Momente, roh und in Bewegung.
+      </p>
+    </div>
+  </section>
+
+  <!-- WORK / PORTFOLIO -->
+  <section class="work" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">01</span>
+        <h2>Portfolio</h2>
+      </div>
+
+      <div class="filters reveal">
+        <button class="filter-btn active" data-filter="all">Alle</button>
+        <button class="filter-btn" data-filter="event">Events</button>
+        <button class="filter-btn" data-filter="konzert">Konzerte</button>
+        <button class="filter-btn" data-filter="sport">Sport</button>
+      </div>
+
+      <div class="gallery" id="gallery">
+        <figure class="gallery-item reveal" data-category="konzert">
+          <img src="images/concert-1.jpg" alt="Konzertfotografie" loading="lazy">
+          <figcaption><span>Konzert</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="sport">
+          <img src="images/sport-1.jpg" alt="Sportfotografie" loading="lazy">
+          <figcaption><span>Sport</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="event">
+          <img src="images/event-1.jpg" alt="Eventfotografie" loading="lazy">
+          <figcaption><span>Event</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="konzert">
+          <img src="images/concert-2.jpg" alt="Konzertfotografie" loading="lazy">
+          <figcaption><span>Konzert</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="event">
+          <img src="images/event-2.jpg" alt="Eventfotografie" loading="lazy">
+          <figcaption><span>Event</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="sport">
+          <img src="images/sport-2.jpg" alt="Sportfotografie" loading="lazy">
+          <figcaption><span>Sport</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="konzert">
+          <img src="images/concert-3.jpg" alt="Konzertfotografie" loading="lazy">
+          <figcaption><span>Konzert</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="sport">
+          <img src="images/sport-3.jpg" alt="Sportfotografie" loading="lazy">
+          <figcaption><span>Sport</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="event">
+          <img src="images/event-3.jpg" alt="Eventfotografie" loading="lazy">
+          <figcaption><span>Event</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="konzert">
+          <img src="images/concert-4.jpg" alt="Konzertfotografie" loading="lazy">
+          <figcaption><span>Konzert</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="sport">
+          <img src="images/sport-4.jpg" alt="Sportfotografie" loading="lazy">
+          <figcaption><span>Sport</span></figcaption>
+        </figure>
+        <figure class="gallery-item reveal" data-category="event">
+          <img src="images/event-4.jpg" alt="Eventfotografie" loading="lazy">
+          <figcaption><span>Event</span></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <div class="container about-grid">
+      <div class="about-media reveal">
+        <img src="images/about.jpg" alt="Dane Junold, Fotograf" loading="lazy">
+      </div>
+      <div class="about-content">
+        <span class="section-num reveal">02</span>
+        <h2 class="reveal">Über mich</h2>
+        <p class="reveal">
+          Seit Jahren bin ich als Fotograf dort unterwegs, wo Adrenalin,
+          Bass und Emotion aufeinandertreffen — von der Bühne bis zum
+          Spielfeldrand. Auf Wunsch halte ich die gleichen Momente auch
+          als Videograf fest. Mein Ziel: den einen Moment einfangen, der
+          die ganze Geschichte erzählt.
+        </p>
+        <p class="reveal">
+          Ob ausverkaufte Konzerthalle, private Feier oder Stadion unter
+          Flutlicht — ich arbeite schnell, unauffällig und mit einem Auge
+          fürs Detail, damit ihr euch auf euren Moment konzentrieren könnt.
+        </p>
+        <a href="#contact" class="btn reveal">Projekt anfragen</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <span class="section-num reveal">03</span>
+      <h2 class="reveal">Let's work<br>together.</h2>
+      <a href="mailto:info@dane-j.com" class="contact-email reveal">info@dane-j.com</a>
+      <div class="contact-details reveal">
+        <a href="tel:+498951506101">089 51 50 61 01</a>
+        <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener">@dane.jproductions</a>
+        <span>München, Deutschland</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© <span id="year"></span> Dane.J Productions</p>
+    <nav class="footer-nav">
+      <a href="impressum.html">Impressum</a>
+      <a href="datenschutz.html">Datenschutz</a>
+      <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Schließen">&times;</button>
+  <img src="" alt="" id="lightboxImg">
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
