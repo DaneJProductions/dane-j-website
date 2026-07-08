@@ -85,17 +85,21 @@ revealEls.forEach(el => revealObserver.observe(el));
 /* ---------- Portfolio filter ---------- */
 const filterBtns = document.querySelectorAll('.filter-btn');
 const galleryItems = document.querySelectorAll('.gallery-item');
+const applyFilter = (filter) => {
+  galleryItems.forEach(item => {
+    const match = filter === 'all' || item.dataset.category === filter;
+    item.classList.toggle('is-hidden', !match);
+  });
+};
 filterBtns.forEach(btn => {
   btn.addEventListener('click', () => {
     filterBtns.forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    galleryItems.forEach(item => {
-      const match = filter === 'all' || item.dataset.category === filter;
-      item.classList.toggle('is-hidden', !match);
-    });
+    applyFilter(btn.dataset.filter);
   });
 });
+const defaultFilterBtn = document.querySelector('.filter-btn.active');
+if (defaultFilterBtn) applyFilter(defaultFilterBtn.dataset.filter);
 
 /* ---------- Lightbox ---------- */
 const lightbox = document.getElementById('lightbox');
