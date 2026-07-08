@@ -129,25 +129,3 @@ lightbox.addEventListener('click', (e) => {
 window.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeLightbox();
 });
-
-/* ---------- Custom cursor (desktop) ---------- */
-if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-  const dot = document.getElementById('cursorDot');
-  let mouseX = 0, mouseY = 0, isHovering = false;
-
-  const renderCursor = () => {
-    const scale = isHovering ? 2.4 : 1;
-    dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%) scale(${scale})`;
-  };
-
-  window.addEventListener('mousemove', (e) => {
-    mouseX = e.clientX;
-    mouseY = e.clientY;
-    dot.style.opacity = '1';
-    renderCursor();
-  });
-  document.querySelectorAll('a, button, .gallery-item').forEach(el => {
-    el.addEventListener('mouseenter', () => { isHovering = true; renderCursor(); });
-    el.addEventListener('mouseleave', () => { isHovering = false; renderCursor(); });
-  });
-}

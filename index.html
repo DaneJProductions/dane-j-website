@@ -54,7 +54,6 @@
 <body>
 
 <div class="grain-overlay" aria-hidden="true"></div>
-<div class="cursor-dot" id="cursorDot"></div>
 
 <header class="site-header" id="siteHeader">
   <div class="header-inner">
@@ -63,7 +62,7 @@
       <a href="#work" class="nav-link">Portfolio</a>
       <a href="#about" class="nav-link">Über mich</a>
       <a href="#contact" class="nav-link">Kontakt</a>
-      <a href="https://danej.sellfy.store" target="_blank" rel="noopener" class="nav-link">Preset Pack ↗</a>
+      <a href="#presets" class="nav-link">Preset Pack</a>
       <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener" class="nav-link nav-link--mobile-only">Instagram ↗</a>
     </nav>
     <a href="https://instagram.com/dane.jproductions" target="_blank" rel="noopener" class="header-social">Instagram ↗</a>
@@ -299,10 +298,69 @@
     </div>
   </section>
 
+  <!-- PRESET PACK -->
+  <section class="presets" id="presets">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="section-num">03</span>
+        <h2>Preset Pack</h2>
+      </div>
+
+      <p class="presets-intro reveal">
+        Der gleiche Look wie in meinem Portfolio — jetzt auch für deine eigenen
+        Konzert-, Sport- und Event-Fotos. Ein Klick in Lightroom, kein
+        Vorwissen nötig.
+      </p>
+
+      <!-- Vorher/Nachher-Bilder: images/preset-vorher-1..3.jpg und images/preset-nachher-1..3.jpg
+           per Dateiaustausch ersetzen (gleiche Dateinamen beibehalten). -->
+      <div class="preset-compare">
+        <div class="preset-pair reveal">
+          <div class="preset-pair-img">
+            <img src="images/preset-vorher-1.jpg" alt="Konzertfoto unbearbeitet" loading="lazy">
+            <span class="preset-tag preset-tag--before">Vorher</span>
+          </div>
+          <div class="preset-pair-img">
+            <img src="images/preset-nachher-1.jpg" alt="Konzertfoto mit Dane.J Preset bearbeitet" loading="lazy">
+            <span class="preset-tag preset-tag--after">Nachher</span>
+          </div>
+        </div>
+        <div class="preset-pair reveal">
+          <div class="preset-pair-img">
+            <img src="images/preset-vorher-2.jpg" alt="Sportfoto unbearbeitet" loading="lazy">
+            <span class="preset-tag preset-tag--before">Vorher</span>
+          </div>
+          <div class="preset-pair-img">
+            <img src="images/preset-nachher-2.jpg" alt="Sportfoto mit Dane.J Preset bearbeitet" loading="lazy">
+            <span class="preset-tag preset-tag--after">Nachher</span>
+          </div>
+        </div>
+        <div class="preset-pair reveal">
+          <div class="preset-pair-img">
+            <img src="images/preset-vorher-3.jpg" alt="Eventfoto unbearbeitet" loading="lazy">
+            <span class="preset-tag preset-tag--before">Vorher</span>
+          </div>
+          <div class="preset-pair-img">
+            <img src="images/preset-nachher-3.jpg" alt="Eventfoto mit Dane.J Preset bearbeitet" loading="lazy">
+            <span class="preset-tag preset-tag--after">Nachher</span>
+          </div>
+        </div>
+      </div>
+
+      <ul class="presets-features reveal">
+        <li>Für Bühnenlicht, Flutlicht &amp; Lowlight-Events entwickelt</li>
+        <li>Ein Klick in Lightroom Mobile oder Desktop</li>
+        <li>Aus echten Shoots entwickelt — nicht generisch designt</li>
+      </ul>
+
+      <a href="https://danej.sellfy.store" target="_blank" rel="noopener" class="btn btn--accent reveal">Preset Pack ansehen ↗</a>
+    </div>
+  </section>
+
   <!-- CONTACT -->
   <section class="contact" id="contact">
     <div class="container">
-      <span class="section-num reveal">03</span>
+      <span class="section-num reveal">04</span>
       <h2 class="reveal">Let's work<br>together.</h2>
 
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="contact-form reveal" id="contactForm">
